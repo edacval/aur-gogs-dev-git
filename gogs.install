@@ -40,12 +40,13 @@ pre_install() {
 
 post_install(){
     systemctl daemon-reload
-    echo "  If you do not have a custom configuration files finish the setup:"
-    echo "    1) systemctl start gogs.service"
+    echo "  If you do not have a custom configuration file finish the setup:"
+    echo "    1) start gogs service"
     echo "    2) open the installation page http://$(uname -n):3000/"
     echo "  Otherwise:"
-    echo "    Place your custom configuration files in /srv/gogs/custom/conf"
-    echo "  The default configuration file is located at"
+    echo "    Place your custom configuration file in /srv/gogs/custom/conf/app.ini"
+    echo ""
+    echo "  Default configuration can be located at:"
     echo "  /usr/share/gogs/conf/app.ini.default"
 }
 
